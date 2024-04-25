@@ -156,8 +156,8 @@ function spawnTargets() {
             xCenter - x)
 
         const velocity = {
-            x: Math.cos(angle)  * 2,
-            y: Math.sin(angle)  * 2
+            x: Math.cos(angle)  * 1.8,
+            y: Math.sin(angle)  * 1.8
         }
 
         targets.push(new Targets(x, y, radius, color, velocity))
@@ -225,7 +225,7 @@ function animate() {
                     scoreNo.innerHTML = score
 
                     gsap.to(target,{
-                        radius: target.radius - 10
+                        radius: target.radius - 15
                     })
                     setTimeout(() => {
                     projectiles.splice(pIndex, 1)
